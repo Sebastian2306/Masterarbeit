@@ -1,3 +1,4 @@
+#successiv version of the rw with mult walkers and food
 import numpy as np
 import random as rand
 import matplotlib.pyplot as plt
