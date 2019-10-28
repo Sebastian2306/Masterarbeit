@@ -1,4 +1,3 @@
-#successiv version of the rw with mult walkers and food
 import numpy as np
 import random as rand
 import matplotlib.pyplot as plt
@@ -26,7 +25,7 @@ def rw(L, N, pot, f): #boxsize, number of walkers, time, food-parameter
         mat[int(pos[n,1]), int(pos[n,0])] = 0 #set entry on which a walker sits to zero, so allways pacman eats all the food
     #print(startconf)
     
-    #calc all the prob to move, than move all walkers successively
+    #calc all the prob to move, than move all walkers at the same time, that everyone sees the same food
     prob = np.zeros((N,4)) #up, down, left, right
     for n in range(N):
         prob[n,0] = np.exp(mat[int((pos[n,1] + 1)%L), int(pos[n,0])]) #up
@@ -41,7 +40,7 @@ def rw(L, N, pot, f): #boxsize, number of walkers, time, food-parameter
     deltax = np.zeros(N)
     deltay = np.zeros(N)
     for t in range(1, int(10**pot) + 1):
-        #calc the prob of one walker, than move the walker and change the food matrix, that the next walker sees the new food matrix
+        #calc all the prob to move, than move all walkers at the same time, that everyone sees the same food
         prob = np.zeros((N,4)) #up, down, left, right
         for n in range(N):
             prob[n,0] = np.exp(mat[int((pos[n,1] + 1)%L), int(pos[n,0])]) #up
@@ -49,8 +48,11 @@ def rw(L, N, pot, f): #boxsize, number of walkers, time, food-parameter
             prob[n,2] = np.exp(mat[int(pos[n,1]), int((pos[n,0] + 1)%L)]) #left
             prob[n,3] = np.exp(mat[int(pos[n,1]), int((pos[n,0] - 1)%L)]) #right
             prob[n,:] = prob[n,:] / sum(prob[n,:]) #normalization
-            
-            #move the n'th walker:
+        #print(t, prob)
+        
+
+        for n in range(N):
+            #move all walkers and change the food matrix afterwards
             rn = rand.random()
             #print(rn)
             if rn < prob[n,0]:
@@ -65,27 +67,28 @@ def rw(L, N, pot, f): #boxsize, number of walkers, time, food-parameter
             if rn > 1 - prob[n,3]:
                 ud_wall[n] = ud_wall.copy()[n] + ((pos.copy()[n,1] - 1) // L)
                 pos[n,1] = (pos[n,1] - 1) % L
-            #change the matrix, so the prob of the next walker is determined by the changed matrix
-            mat[int(pos[n,1]), int(pos[n,0])] = 0 #set entry on which a walker sits to zero, so allways pacman eats all the food
-        if t in grid:
-            deltax = (pos[:,0] - startconf[:,0]) + lr_wall * L
-            deltay = (pos[:,1] - startconf[:,1]) + ud_wall * L          
-            msd[:,i] = deltax**2 + deltay**2
-            fpercentage[i] = sum(sum(mat)) / (f * L**2)
-            i = i + 1
         #print(pos)
         #print('lr:', lr_wall)
         #print('ud:', ud_wall)
         #print('dx:', deltax)
         #print('dy:', deltay)
         #print(msd)
+        #now change the matrix
+        for n in range(N):
+            mat[int(pos[n,1]), int(pos[n,0])] = 0 #set entry on which a walker sits to zero, so allways pacman eats all the food
         #print(mat)
+        if t in grid:
+            deltax = (pos[:,0] - startconf[:,0]) + lr_wall * L
+            deltay = (pos[:,1] - startconf[:,1]) + ud_wall * L          
+            msd[:,i] = deltax**2 + deltay**2
+            fpercentage[i] = sum(sum(mat)) / (f * L**2)
+            i = i + 1
         end = timer()
     print(end - start)
     return msd, fpercentage
             
     
-def multiple_walks(L, N, pot, f, n):#n number of walks per matrix, m number of matrices
+def multiple_walks(L, N, pot, f, n):#n number of walks per matrix
     grid = [] 
     for k in list(np.round(np.logspace(0, pot))):
         if k not in grid:
@@ -97,12 +100,11 @@ def multiple_walks(L, N, pot, f, n):#n number of walks per matrix, m number of m
         fpercentage = fpercentage + rw(L, N, pot, f)[1]
     avgmsd = sum(msd) / (N*n)
     fpercentage = fpercentage / n
-    return avgmsd, grid, fpercentage           
+    return avgmsd, grid, fpercentage            
     
-
 #f = int(sys.argv[1])
     
-avgmsd, grid, fpercentage = multiple_walks(10, 10, 2, 5, 100)
+avgmsd, grid, fpercentage = multiple_walks(10, 10, 4, 10, 100)
 plt.subplot(2,1,1)
 plt.loglog(grid,avgmsd,label='$F=10$',lw = 0.5)
 plt.loglog(grid,grid,label='$reference$',lw = 0.5)
