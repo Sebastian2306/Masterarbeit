@@ -15,6 +15,7 @@ def rw(L, N, pot, f): #boxsize, number of walkers, time, food-parameter
         if k not in grid:
             grid.append(k)
     msd = np.zeros((N, len(grid)))
+    fpercentage = np.zeros(len(grid))
     i = 0
     
     for n in range(N): #search iid starting pos for all walkers
@@ -66,11 +67,6 @@ def rw(L, N, pot, f): #boxsize, number of walkers, time, food-parameter
             if rn > 1 - prob[n,3]:
                 ud_wall[n] = ud_wall.copy()[n] + ((pos.copy()[n,1] - 1) // L)
                 pos[n,1] = (pos[n,1] - 1) % L
-        if t in grid:
-            deltax = (pos[:,0] - startconf[:,0]) + lr_wall * L
-            deltay = (pos[:,1] - startconf[:,1]) + ud_wall * L          
-            msd[:,i] = deltax**2 + deltay**2
-            i = i + 1
         #print(pos)
         #print('lr:', lr_wall)
         #print('ud:', ud_wall)
@@ -81,24 +77,50 @@ def rw(L, N, pot, f): #boxsize, number of walkers, time, food-parameter
         for n in range(N):
             mat[int(pos[n,1]), int(pos[n,0])] = 0 #set entry on which a walker sits to zero, so allways pacman eats all the food
         #print(mat)
+        if t in grid:
+            deltax = (pos[:,0] - startconf[:,0]) + lr_wall * L
+            deltay = (pos[:,1] - startconf[:,1]) + ud_wall * L          
+            msd[:,i] = deltax**2 + deltay**2
+            fpercentage[i] = sum(sum(mat)) / (f * L**2)
+            i = i + 1
         end = timer()
     print(end - start)
-    return msd
+    return msd, fpercentage
             
     
-def multiple_walks(L, N, pot, f, n):#n number of walks per matrix, m number of matrices
+def multiple_walks(L, N, pot, f, n):#n number of walks per matrix
     grid = [] 
     for k in list(np.round(np.logspace(0, pot))):
         if k not in grid:
             grid.append(k)
     msd = np.zeros((N,len(grid)))
+    fpercentage = np.zeros(len(grid))
     for i in range(n): #average over the n walks
-        msd = msd + rw(L, N, pot, f)
+        msd = msd + rw(L, N, pot, f)[0]
+        fpercentage = fpercentage + rw(L, N, pot, f)[1]
     avgmsd = sum(msd) / (N*n)
-    return avgmsd, grid            
+    fpercentage = fpercentage / n
+    diffmsd = np.zeros((len(grid)))
+    for i in range(len(grid) - 1):
+        diffmsd[i] = (avgmsd[i+1] - avgmsd[i])/(grid[i+1] - grid[i])
+    diffmsd[len(grid) - 1] = diffmsd[len(grid) - 2]
+    return avgmsd, grid, fpercentage, diffmsd            
     
-N = int(sys.argv[1])
-f = int(sys.argv[2])
+f = int(sys.argv[1])
     
-avgmsd, grid = multiple_walks(1000, N, 6, f, 10)
-#np.savetxt('crit_food.dat', avgmsd)
+avgmsd, grid, fpercentage, diffmsd = multiple_walks(100, 1, 3, f, 10)
+#plt.subplot(2,1,1)
+#plt.loglog(grid,avgmsd,label='$F=10$',lw = 0.5)
+#plt.loglog(grid,grid,label='$reference$',lw = 0.5)
+#plt.xlabel('$steps$', size = 15)
+#plt.ylabel('$msd$', size = 15)
+#plt.legend()
+#plt.subplot(2,1,2)
+#plt.plot(grid,fpercentage)
+#plt.xscale('log')
+#plt.xlabel('$steps$', size = 15)
+#plt.ylabel('$food$', size = 15)
+#plt.savefig('L10test.pdf')
+np.savetxt('rw0.dat', avgmsd)
+np.savetxt('food0.dat', fpercentage)
+np.savetxt('diff0.dat', diffmsd)
