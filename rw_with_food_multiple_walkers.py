@@ -1,7 +1,44 @@
 import numpy as np
 import random as rand
 import matplotlib.pyplot as plt
-import sys
+#import sys
+
+
+# function to determine fractal dimension of the food
+def fractal_dimension(Z, label):
+
+    # Only for 2d image
+    assert(len(Z.shape) == 2)
+
+    def boxcount(Z, k):
+        points = 0
+        for i in range(k):
+            for j in range(k):
+                if Z[i,j] == label:
+                    points += 1
+        return points
+    # Minimal dimension of image
+    p = min(Z.shape)
+
+    # Greatest power of 2 less than or equal to p
+    n = 2**np.floor(np.log(p)/np.log(2))
+
+    # Extract the exponent
+    n = int(np.log(n)/np.log(2))
+
+    # Build successive box sizes (from 2**n down to 2**1)
+    sizes = 2**np.arange(n, 1, -1)
+
+    # Actual box counting with decreasing size
+    counts = []
+    for size in sizes:
+        counts.append(boxcount(Z, size))
+
+    # Fit the successive log(sizes) with log (counts)
+    #plt.plot(sizes, counts)
+    coeffs = np.polyfit(np.log(sizes), np.log(counts), 1)
+    return coeffs[0]
+
 
 
 def rw(L, N, pot, f): #boxsize, number of walkers, time, food-parameter
@@ -16,6 +53,8 @@ def rw(L, N, pot, f): #boxsize, number of walkers, time, food-parameter
             grid.append(k)
     msd = np.zeros((N, len(grid)))
     fpercentage = np.zeros(len(grid))
+    fdimension = np.zeros(len(grid))
+    fmats = np.zeros((len(grid), L, L))
     i = 0
     
     for n in range(N): #search iid starting pos for all walkers
@@ -82,10 +121,12 @@ def rw(L, N, pot, f): #boxsize, number of walkers, time, food-parameter
             deltay = (pos[:,1] - startconf[:,1]) + ud_wall * L          
             msd[:,i] = deltax**2 + deltay**2
             fpercentage[i] = sum(sum(mat)) / (f * L**2)
+            fdimension[i] = fractal_dimension(mat, f)
+            fmats[i] = mat
             i = i + 1
         end = timer()
     print(end - start)
-    return msd, fpercentage
+    return msd, fpercentage, fdimension
             
     
 def multiple_walks(L, N, pot, f, n):#n number of walks per matrix
@@ -95,32 +136,41 @@ def multiple_walks(L, N, pot, f, n):#n number of walks per matrix
             grid.append(k)
     msd = np.zeros((N,len(grid)))
     fpercentage = np.zeros(len(grid))
+    fdimension = np.zeros(len(grid))
     for i in range(n): #average over the n walks
         msd = msd + rw(L, N, pot, f)[0]
         fpercentage = fpercentage + rw(L, N, pot, f)[1]
+        fdimension = fdimension + rw(L, N, pot, f)[2]
     avgmsd = sum(msd) / (N*n)
     fpercentage = fpercentage / n
+    fdimension = fdimension / n
     diffmsd = np.zeros((len(grid)))
     for i in range(len(grid) - 1):
         diffmsd[i] = (avgmsd[i+1] - avgmsd[i])/(grid[i+1] - grid[i])
     diffmsd[len(grid) - 1] = diffmsd[len(grid) - 2]
-    return avgmsd, grid, fpercentage, diffmsd            
+    return avgmsd, grid, fpercentage, diffmsd, fdimension           
     
-f = int(sys.argv[1])
+#f = int(sys.argv[1])
     
-avgmsd, grid, fpercentage, diffmsd = multiple_walks(100, 1, 3, f, 10)
-#plt.subplot(2,1,1)
-#plt.loglog(grid,avgmsd,label='$F=10$',lw = 0.5)
-#plt.loglog(grid,grid,label='$reference$',lw = 0.5)
-#plt.xlabel('$steps$', size = 15)
-#plt.ylabel('$msd$', size = 15)
-#plt.legend()
-#plt.subplot(2,1,2)
-#plt.plot(grid,fpercentage)
-#plt.xscale('log')
-#plt.xlabel('$steps$', size = 15)
-#plt.ylabel('$food$', size = 15)
+avgmsd, grid, fpercentage, diffmsd, fdim = multiple_walks(100, 1000, 3, 5, 10)
+plt.figure(num=None, figsize=(6, 10), dpi=80, facecolor='w', edgecolor='k')
+plt.subplot(3,1,1)
+plt.loglog(grid,avgmsd,label='$F=5$',lw = 0.5)
+plt.loglog(grid,grid,label='$reference$',lw = 0.5)
+plt.xlabel('$steps$', size = 15)
+plt.ylabel('$msd$', size = 15)
+plt.legend()
+plt.subplot(3,1,2)
+plt.plot(grid,fpercentage)
+plt.xscale('log')
+plt.xlabel('$steps$', size = 15)
+plt.ylabel('$food$', size = 15)
+plt.subplot(3,1,3)
+plt.plot(grid,fdim)
+plt.xscale('log')
+plt.xlabel('$steps$', size = 15)
+plt.ylabel('$fractal\ dim$', size = 15)
 #plt.savefig('L10test.pdf')
-np.savetxt('rw0.dat', avgmsd)
-np.savetxt('food0.dat', fpercentage)
-np.savetxt('diff0.dat', diffmsd)
+#np.savetxt('rw0.dat', avgmsd)
+#np.savetxt('food0.dat', fpercentage)
+#np.savetxt('diff0.dat', diffmsd)
