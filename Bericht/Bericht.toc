@@ -1,0 +1,9 @@
+\babel@toc {nil}{}
+\contentsline {section}{\numberline {1}Perkolation}{3}% 
+\contentsline {subsection}{\numberline {1.1}Was ist Perkolation?}{3}% 
+\contentsline {subsection}{\numberline {1.2}Perkolation auf dem Computer}{4}% 
+\contentsline {section}{\numberline {2}Random-Walk in ungeordneten Medien}{5}% 
+\contentsline {subsection}{\numberline {2.1}"Normeler"\ Random-Walk}{5}% 
+\contentsline {subsection}{\numberline {2.2}Random-Walk auf dem Perkolationsgitter}{5}% 
+\contentsline {subsection}{\numberline {2.3}'all-cluster-' und 'percolating-cluster average'}{6}% 
+\contentsline {subsection}{\numberline {2.4}Self-Avoiding Walk auf dem Perkolationsgitter}{7}% 

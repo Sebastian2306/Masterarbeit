@@ -1,0 +1,509 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.10.28)  31 OCT 2019 15:58
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Bericht.tex
+(./Bericht.tex
+LaTeX2e <2018-12-01>
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2019/02/01 v3.26b KOMA-Script document class (article)
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-dependent 
+basics and keyval usage)
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-independent
+ basics and keyval usage)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2019/02/01 v3.26b KOMA-Script package (loading files)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2019/02/01 v3.26b KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip41
+\scr@dte@tocline@numbox=\box27
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 134.
+Package scrartcl Info: You've used standard option `12pt'.
+(scrartcl)             This is correct!
+(scrartcl)             Internally I'm using `fontsize=12pt'.
+(scrartcl)             If you'd like to set the option with \KOMAoptions,
+(scrartcl)             you'd have to use `fontsize=12pt' there
+(scrartcl)             instead of `12pt', too.
+Class scrartcl Info: File `scrsize12pt.clo' used to setup font sizes on input l
+ine 2162.
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
+File: scrsize12pt.clo 2019/02/01 v3.26b KOMA-Script font size class option (12p
+t)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2019/02/01 v3.26b KOMA-Script package (type area)
+\ta@bcor=\skip42
+\ta@div=\count80
+Package typearea Info: You've used standard option `a4paper'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `paper=a4'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `paper=a4' there
+(typearea)             instead of `a4paper', too.
+\ta@hblk=\skip43
+\ta@vblk=\skip44
+\ta@temp=\skip45
+\footheight=\skip46
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 12
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 448.13095pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 635.5pt
+(typearea)              \topmargin      = -41.72441pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
+(typearea)              on input line 1715.
+)
+\c@part=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\scr@dte@section@maxnumwidth=\skip47
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\section on input line 4489.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\section on input line 4489.
+\scr@dte@part@maxnumwidth=\skip48
+Class scrartcl Info: using compatibility default `afterindent=false'
+(scrartcl)           for `\part on input line 4497.
+\scr@dte@subsection@maxnumwidth=\skip49
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsection on input line 4507.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsection on input line 4507.
+\scr@dte@subsubsection@maxnumwidth=\skip50
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsubsection on input line 4517.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsubsection on input line 4517.
+\scr@dte@paragraph@maxnumwidth=\skip51
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\paragraph on input line 4527.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\paragraph on input line 4527.
+\scr@dte@subparagraph@maxnumwidth=\skip52
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subparagraph on input line 4537.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subparagraph on input line 4537.
+\abovecaptionskip=\skip53
+\belowcaptionskip=\skip54
+\c@pti@nb@sid@b@x=\box28
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 5781.
+\scr@dte@figure@maxnumwidth=\skip55
+\c@figure=\count87
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 5793.
+\scr@dte@table@maxnumwidth=\skip56
+\c@table=\count88
+Class scrartcl Info: Redefining `\numberline' on input line 5957.
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2019/09/27 3.34 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2019/09/27 3.34 Babel switching mechanism
+)
+
+! Package babel Error: Unknown option `ngerman'. Either you misspelled it
+(babel)                or the language definition file ngerman.ldf was not foun
+d.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.552 \ProcessOptions*
+                      
+Valid options are: shorthands=, KeepShorthandsActive,
+activeacute, activegrave, noconfigs, safe=, main=, math=
+headfoot=, strings=, config=, hyphenmap=, or a language name.
+
+Package babel Info: You haven't specified a language. I'll use 'nil'
+(babel)             as the main language. Reported on input line 582.
+(/usr/share/texlive/texmf-dist/tex/generic/babel/nil.ldf
+Language: nil 2019/09/27 3.34 Nil language
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2019/09/27 3.34 Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen103
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count90
+)
+\l@nil=\language5
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip57
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen104
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen105
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks18
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks19
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks20
+\multlinegap=\skip58
+\multlinetaggap=\skip59
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/braket/braket.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen115
+\WF@size=\dimen116
+\c@WF@wrappedlines=\count103
+\WF@box=\box31
+\WF@everypar=\toks22
+Package: wrapfig 2003/01/31  v 3.6
+)
+No file Bericht.aux.
+\openout1 = `Bericht.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count104
+\scratchdimen=\dimen117
+\scratchbox=\box32
+\nofMPsegments=\count105
+\nofMParguments=\count106
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count107
+\MPscratchDim=\dimen118
+\MPnumerator=\count108
+\makeMPintoPDFobject=\count109
+\everyMPtoPDFconversion=\toks24
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+<DLR.png, id=1, 276.03125pt x 183.68625pt>
+File: DLR.png Graphic file (type png)
+<use DLR.png>
+Package pdftex.def Info: DLR.png  used on input line 25.
+(pdftex.def)             Requested size: 358.50612pt x 238.59587pt.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./DLR.png>]
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 31.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+No file Bericht.toc.
+\tf@toc=\write3
+\openout3 = `Bericht.toc'.
+
+[2]
+LaTeX Font Info:    Try loading font information for U+msa on input line 35.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 35.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<Percolation1.jpg, id=16, 477.785pt x 279.0425pt>
+File: Percolation1.jpg Graphic file (type jpg)
+<use Percolation1.jpg>
+Package pdftex.def Info: Percolation1.jpg  used on input line 38.
+(pdftex.def)             Requested size: 286.6732pt x 167.42679pt.
+
+Overfull \hbox (44.74875pt too wide) in paragraph at lines 35--49
+\T1/cmr/m/n/12 In diesem Bericht geht es stets um Perkolation auf einem Quadrat
+gitter in zwei Raumdimensionen.
+ []
+
+
+Overfull \hbox (11.10414pt too wide) in paragraph at lines 35--49
+\T1/cmr/m/n/12 Üblicherweise wird der Beginn der Perkolationstheorie mit einer 
+Publikation von Broadbent
+ []
+
+
+Overfull \hbox (123.82391pt too wide) in paragraph at lines 35--49
+\T1/cmr/m/n/12 eingeführt wurde, und in welcher sie mit den oben erläuterten ge
+ometrischen und wahrscheinlichkeitstheoretischen
+ []
+
+
+Overfull \hbox (2.97234pt too wide) in paragraph at lines 35--49
+\T1/cmr/m/n/12 Konzepten mathematischer behandelt wurde. Hammersley erwähnt in 
+seiner persönlichen
+ []
+
+[3 <./Percolation1.jpg>]
+<H-K_algorithm.png, id=28, 347.04657pt x 317.68687pt>
+File: H-K_algorithm.png Graphic file (type png)
+<use H-K_algorithm.png>
+Package pdftex.def Info: H-K_algorithm.png  used on input line 55.
+(pdftex.def)             Requested size: 173.52286pt x 158.84303pt.
+ [4 <./H-K_algorithm.png>]
+Overfull \hbox (7.61467pt too wide) in paragraph at lines 67--68
+\T1/cmr/m/n/12 Der Random-Walk auf dem freien Quadratgitter unterliegt bekanntl
+ich normaler Diffusion,
+ []
+
+
+Overfull \hbox (7.41422pt too wide) in paragraph at lines 67--68
+\T1/cmr/m/n/12 das heiÿt, dass das mittlere quadratische Verschiebung (engl. me
+an squared displacement),
+ []
+
+
+Overfull \hbox (3.92355pt too wide) in paragraph at lines 67--68
+\T1/cmr/m/n/12 welches im weiteren mit $\OML/cmm/m/it/12 msd$ \T1/cmr/m/n/12 ab
+gekürzt wird, linear mit der Anzahl an Schritten anwächst.
+ []
+
+
+Overfull \hbox (0.76588pt too wide) in paragraph at lines 77--81
+\OT1/cmr/m/n/12 0$ \T1/cmr/m/n/12 ist. Gefen, Aharony und Alexander nannten die
+sen Effekt, dass der Diffusionskoeffizient
+ []
+
+
+Overfull \hbox (3.7685pt too wide) in paragraph at lines 77--81
+\T1/cmr/m/n/12 Walker spürt auch eine leichte fraktale Struktur und hat daher e
+inen Exponenten zwischen
+ []
+
+[5]
+<acpc_fig.pdf, id=36, 433.62pt x 289.08pt>
+File: acpc_fig.pdf Graphic file (type pdf)
+<use acpc_fig.pdf>
+Package pdftex.def Info: acpc_fig.pdf  used on input line 87.
+(pdftex.def)             Requested size: 390.2544pt x 260.16959pt.
+
+Overfull \hbox (28.73738pt too wide) in paragraph at lines 84--91
+\T1/cmr/m/n/12 Startwerte die nur auf dem perkolierenden Cluster liegen ('all-c
+luster average' und 'percolating-
+ []
+
+
+Overfull \hbox (2.141pt too wide) in paragraph at lines 84--91
+\T1/cmr/m/n/12 unter dem Exponenten des 'percolating-cluster average' liegt, da
+ beim 'all-cluster average'
+ []
+
+[6 <./acpc_fig.pdf>]
+Overfull \hbox (1.4106pt too wide) in paragraph at lines 92--93
+\T1/cmr/m/n/12 Die Exponenten wurden über einen $\OML/cmm/m/it/12 scipy:optimiz
+e:curve[]fit$ \T1/cmr/m/n/12 als $\OML/cmm/m/it/12 ^^W[]$ \T1/cmr/m/n/12 und $\
+OML/cmm/m/it/12 ^^W[]$ \T1/cmr/m/n/12 bestimmt.
+ []
+
+
+Overfull \hbox (11.29443pt too wide) in paragraph at lines 98--102
+\T1/cmr/m/n/12 Nun lässt sich auch leicht die Frage formulieren wie sich ein SA
+W auf dem Perkolationsgitter
+ []
+
+[7] (./Bericht.aux) ) 
+Here is how much of TeX's memory you used:
+ 5367 strings out of 494510
+ 85862 string characters out of 6176235
+ 262195 words of memory out of 5000000
+ 8949 multiletter control sequences out of 15000+600000
+ 19976 words of font info for 53 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 51i,9n,51p,9086b,242s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/stei_s2/.texlive2019/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecrm1000.600pk> </home/stei_s2/.texlive2019/texmf-var/fonts/pk/ljfour/
+jknappen/ec/ecrm0700.600pk> </home/stei_s2/.texlive2019/texmf-var/fonts/pk/ljfo
+ur/jknappen/ec/ecrm0800.600pk> </home/stei_s2/.texlive2019/texmf-var/fonts/pk/l
+jfour/jknappen/ec/ecsx1440.600pk> </home/stei_s2/.texlive2019/texmf-var/fonts/p
+k/ljfour/jknappen/ec/ecsx1728.600pk> </home/stei_s2/.texlive2019/texmf-var/font
+s/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/stei_s2/.texlive2019/texmf-var/f
+onts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/stei_s2/.texlive2019/texmf-va
+r/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/stei_s2/.texlive2019/texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+>
+Output written on Bericht.pdf (7 pages, 206332 bytes).
+PDF statistics:
+ 365 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
