@@ -1,0 +1,24 @@
+#!/bin/bash
+
+numberofjobs=99
+pidarray=()
+for i in `seq 0 $numberofjobs`;
+        do
+                if [ $i -lt 10 ]; then   wd=do0$i; else wd=do$i ;fi;
+                if [ ! -d $wd ]; then echo creating $wd; mkdir $wd ; fi
+                cp rw_with_food_multiple_walkers.py $wd
+                
+                cd $wd
+                python3 -u rw_with_food_multiple_walkers.py 2 &>out.dat &
+		pidarray+=($!)
+                cd ..
+                
+                
+        done
+for pid in ${pidarray[@]}
+do
+	wait $pid
+done
+
+/home/stei_s2/./mergesamples /home/stei_s2/mult_walker_food/dens5_F2 rwfood.dat
+

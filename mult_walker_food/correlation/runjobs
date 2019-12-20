@@ -1,0 +1,19 @@
+#!/bin/bash
+
+numberofjobs=49
+pidarray=()
+for i in `seq 0 $numberofjobs`;
+        do
+                if [ $i -lt 10 ]; then   wd=do0$i; else wd=do$i ;fi;
+                if [ ! -d $wd ]; then echo creating $wd; mkdir $wd ; fi
+                cp rw_with_food_multiple_walkers.py $wd
+                
+                cd $wd
+                python3 -u rw_with_food_multiple_walkers.py 0 &>out.dat &
+		pidarray+=($!)
+                cd ..
+                
+                
+        done
+
+

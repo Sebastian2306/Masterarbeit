@@ -1,0 +1,7 @@
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Could not connect: Connection refused
+
+(rw_with_food_multiple_walkers.py:22596): Gdk-CRITICAL **: 15:05:15.534: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+
+(rw_with_food_multiple_walkers.py:22596): Gdk-CRITICAL **: 15:05:15.535: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+2022.5190600268543
