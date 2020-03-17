@@ -138,8 +138,8 @@ def multiple_walks(L,p,dens,pot,f,n,m): #boxsize, p value, density of pacmans, l
     return avgmsd, grid, fpercentage, diffmsd
 
 
-msd, grid, fpercentage, diff = multiple_walks(100, 0.592746, 0.1, 4, 5, 1, 1)
-print(msd)
+msd, grid, fpercentage, diff = multiple_walks(100, 0.592746, 0.01, 4, 5, 10, 1)
+#print(msd)
 diff_avg = diff.copy()   
 for k in range(2,len(diff)-2):
     diff_avg[k] = (diff[k-2] + diff[k-1] + diff[k] + diff[k+1] + diff[k+2])/5.0
